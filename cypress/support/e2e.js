@@ -16,8 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+
 beforeEach(() => {
     
-    cy.viewport(1024, 768);
+    cy.viewport(1920, 1080); // 768p resolution makes the website go into mobile view
     cy.visit("https://www.target.com/");
 })
