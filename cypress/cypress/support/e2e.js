@@ -15,3 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+beforeEach(() => {
+    
+    cy.viewport(1024, 768);
+    cy.visit("https://www.target.com/");
+})
