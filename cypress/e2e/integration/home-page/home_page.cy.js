@@ -1,4 +1,4 @@
-const homePage = require("../../pages/homePage");
+const homePage = require("../../../pages/homePage");
 
 // test suite name
 describe('Target Home Screen Test', function () {
