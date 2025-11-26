@@ -1,6 +1,3 @@
-const homePage = require("../../../pages/homePage");
-
-// test suite name
 describe('Text Box Integration Tests', function () {
     
    beforeEach(() => {
