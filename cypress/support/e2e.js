@@ -19,6 +19,6 @@ import './commands'
 
 beforeEach(() => {
     
-    cy.viewport(1920, 1080); // 768p resolution makes the website go into mobile view
-    cy.visit("https://www.target.com/");
+    cy.viewport(1920, 1080); 
+    // cy.visit("<insert url here if always the same>");
 })
