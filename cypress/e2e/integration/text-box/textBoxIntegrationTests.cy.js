@@ -1,3 +1,5 @@
+import textBoxPage from "../../../pages/textBoxPage";
+
 describe('Text Box Integration Tests', function () {
     
    beforeEach(() => {
@@ -9,16 +11,16 @@ describe('Text Box Integration Tests', function () {
       
       const address = '123 Testing Avenue 60443';
 
-      cy.get('#address').type(address).press('Tab');
-      cy.get('#address').should('have.value', address);
+      textBoxPage.elements.address().type(address).press('Tab');
+      textBoxPage.elements.address().should('have.value', address);
    });
 
    it('Email Correctly Displayed', () => {
 
       const email = 'testing@gmail.com';
 
-      cy.get('#email').type(email).press('Tab');
-      cy.get('#email').should('have.value', email);
+      textBoxPage.elements.email().type(email).press('Tab');
+      textBoxPage.elements.email().should('have.value', email);
    });
 
    it('Fill Out Page and Click Submit', () => {
@@ -28,12 +30,7 @@ describe('Text Box Integration Tests', function () {
       const fullName = 'Testing';
       const password = 'Password123';
 
-      cy.get('#fullname').type(fullName).press('Tab');
-      cy.get('#email').type(email).press('Tab');
-      cy.get('#address').type(address).press('Tab');
-      cy.get('#password').type(password).press('Tab');
-
-      cy.get('input[type="submit"]').click();
+      textBoxPage.fillOutThenClickSubmit(fullName, email, address, password);
 
       cy.get('#fullname').should('have.value', '');
       cy.get('#email').should('have.value', '');
@@ -45,15 +42,15 @@ describe('Text Box Integration Tests', function () {
 
       const fullName = 'Testing';
 
-      cy.get('#fullname').type(fullName).press('Tab');
-      cy.get('#fullname').should('have.value', fullName);
+      textBoxPage.elements.fullName().type(fullName).press('Tab');
+      textBoxPage.elements.fullName().should('have.value', fullName);
    });
 
    it('Password Correctly Displayed', () => {
 
       const password = 'Password123';
 
-      cy.get('#password').type(password).press('Tab');
-      cy.get('#password').should('have.value', password);
+      textBoxPage.elements.password().type(password).press('Tab');
+      textBoxPage.elements.password().should('have.value', password);
    });
 });
