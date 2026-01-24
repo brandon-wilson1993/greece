@@ -1,3 +1,5 @@
+const buttonPage = require("../../../pages/ButtonPage");
+
 // test suite name
 describe('Button Integration Tests', function () {
     
@@ -8,7 +10,7 @@ describe('Button Integration Tests', function () {
 
    it('Click Me Button', () => {
       
-      cy.get('.btn.btn-primary').click();
+      buttonPage.elements.clickMeButton().click();
       cy.get('#welcomeDiv').should('contain.text', "You have done a dynamic click");
    });
 });
