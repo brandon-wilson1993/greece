@@ -1,4 +1,4 @@
-import textBoxPage from "../../../pages/textBoxPage";
+import textBoxPage from "../../../pages/TextBoxPage";
 
 describe('Text Box Integration Tests', function () {
     

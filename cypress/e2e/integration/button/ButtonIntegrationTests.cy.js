@@ -1,4 +1,4 @@
-const buttonPage = require("../../../pages/buttonPage");
+const buttonPage = require("../../../pages/ButtonPage");
 
 // test suite name
 describe('Button Integration Tests', function () {
