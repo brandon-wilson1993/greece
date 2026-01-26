@@ -28,7 +28,7 @@ describe("Login Integration Tests", function () {
       .should("have.text", "Please enter your password");
   });
 
-  it("Password is inccorrect", () => {
+  it("Password is incorrect", () => {
     loginPage.elements.username().type("testuser");
     loginPage.elements.password().type("wrongpassword");
     loginPage.elements.loginButton().click();

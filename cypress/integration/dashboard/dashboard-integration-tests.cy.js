@@ -17,7 +17,7 @@ describe("Dashboard Integration Tests", function () {
   });
 
   it("Load Trading Account Correctly", () => {
-    dashboardPage.elements.savingsCard().should("be.visible");
+    dashboardPage.elements.tradingCard().should("be.visible");
     dashboardPage.elements
       .tradingCard()
       .find("div[class='account-type-name']")
@@ -25,7 +25,7 @@ describe("Dashboard Integration Tests", function () {
   });
 
   it("Load Checking Account Correctly", () => {
-    dashboardPage.elements.savingsCard().should("be.visible");
+    dashboardPage.elements.checkingCard().should("be.visible");
     dashboardPage.elements
       .checkingCard()
       .find("div[class='account-type-name']")
