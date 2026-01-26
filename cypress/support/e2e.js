@@ -20,5 +20,5 @@ import './commands'
 beforeEach(() => {
     
     cy.viewport(1920, 1080); 
-    // cy.visit("<insert url here if always the same>");
+    cy.visit("http://localhost:8000/");
 })
