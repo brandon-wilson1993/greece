@@ -10,14 +10,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Start Docker Compose services
+        run: docker compose up -d --wait
+
       - name: Install Node
         uses: actions/setup-node@v6
         with:
           node-version: '24'
 
-      
       - name: Install Cypress dependencies
         run: npm install
       
       - name: Cypress run
         run: npx cypress run
+
+      - name: Stop Docker Compose services
+        if: always()
+        run: docker compose down
